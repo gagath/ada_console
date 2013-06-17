@@ -1,5 +1,4 @@
 with Ada.Text_IO; use Ada.Text_IO;
-with GNAT.OS_Lib;
 
 package body Console is
 
