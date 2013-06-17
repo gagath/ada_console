@@ -36,6 +36,16 @@ package body Console is
         Put_Control("4");
     end Set_Underline;
 
+    procedure Set_Blink is
+    begin
+        Put_Control("5");
+    end Set_Blink;
+
+    procedure Set_Reverse is
+    begin
+        Put_Control("7");
+    end Set_Reverse;
+
     procedure Reset is
     begin
         Put_Control("0");

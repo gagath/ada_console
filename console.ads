@@ -10,6 +10,9 @@ package Console is
     procedure Set_Italic;
     procedure Set_Underline;
 
+    procedure Set_Blink;
+    procedure Set_Reverse;
+
     procedure Reset;
 
 end Console;
