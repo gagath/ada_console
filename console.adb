@@ -45,6 +45,11 @@ package body Console is
         Put_Control("7");
     end Set_Reverse;
 
+    procedure Set_Strike is
+    begin
+        Put_Control("9");
+    end Set_Strike;
+
     procedure Reset is
     begin
         Put_Control("0");

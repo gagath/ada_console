@@ -12,6 +12,7 @@ package Console is
 
     procedure Set_Blink;
     procedure Set_Reverse;
+    procedure Set_Strike;
 
     procedure Reset;
 

@@ -12,4 +12,5 @@ Here are the current features of the library :
  * blink
  * bold
  * italic
+ * strike
  * reset to defaults 
