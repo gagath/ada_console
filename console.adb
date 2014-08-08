@@ -1,23 +1,30 @@
 with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Strings.Fixed;
 
 package body Console is
 
+    use Ada.Strings.Fixed;
+
     -- Local procedure to put control caracters on screen
-    procedure Put_Control(s : in String) is
+    procedure Put_Control(S : in String) is
     begin
-        Put(Character'Val(16#1B#) & "[" & s & "m");
+        Put(Character'Val(16#1B#) & "[" & S & "m");
     end Put_Control;
 
     procedure Set_Foreground(Color_Value : in Color) is
         Color_Integer : constant Integer := Color'Pos(Color_Value);
+        Image : constant String := Integer'Image(Color_Integer);
+        Trimmed_Image : constant String := Trim(Image, Ada.Strings.Left);
     begin
-        Put_Control("3" & Integer'Image(Color_Integer));
+        Put_Control("3" & Trimmed_Image);
     end Set_Foreground;
 
     procedure Set_Background(Color_Value : in Color) is
         Color_Integer : constant Integer := Color'Pos(Color_Value);
+        Image : constant String := Integer'Image(Color_Integer);
+        Trimmed_Image : constant String := Trim(Image, Ada.Strings.Left);
     begin
-        Put_Control("4" & Integer'Image(Color_Integer));
+        Put_Control("4" & Trimmed_Image);
     end Set_Background;
 
     procedure Set_Bold is
