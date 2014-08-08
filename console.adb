@@ -34,7 +34,7 @@ package body Console is
 
     procedure Set_Italic is
     begin
-        Put_Control("6");
+        Put_Control("3");
     end Set_Italic;
 
     procedure Set_Underline is
